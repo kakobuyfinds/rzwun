@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>FishBuy spreadsheet | Guia para conferir links e produtos</title>
+  <meta name="description" content="Use o guia FishBuy spreadsheet para explorar categorias, conferir links de produtos, comparar medidas e fotos QC e estimar o custo da encomenda.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FishBuy spreadsheet | Guia para conferir links e produtos">
+  <meta property="og:description" content="Explore dez categorias e aprenda a conferir a variante, as medidas e as fotos QC antes de encomendar.">
+  <style>
+    :root{color-scheme:light;--paper:#f8f0ed;--ink:#30232d;--muted:#66515f;--plum:#451e3c;--rose:#ffe1d8;--line:#d8bec9;--white:#fffaf8}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    .wrap{width:min(70rem,calc(100% - 2rem));margin-inline:auto}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.13}
+    h1{font-size:clamp(2.6rem,6vw,5.3rem);letter-spacing:-.06em}
+    h2{font-size:clamp(1.65rem,3.6vw,2.55rem);letter-spacing:-.036em}
+    h3{font-size:1.2rem}
+    a{color:inherit;text-underline-offset:.22em}
+    :focus-visible{outline:3px solid #9e3971;outline-offset:4px}
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.1rem}
+    .bar a{font-weight:800}
+    .tag{font-size:.78rem;font-weight:750;letter-spacing:.08em;text-transform:uppercase}
+    .hero{display:grid;grid-template-columns:1.12fr .88fr;background:var(--plum);color:var(--white);border-radius:1.35rem;overflow:hidden}
+    .intro{align-self:center;padding:clamp(1.35rem,4vw,3.7rem)}
+    .intro .tag{color:var(--rose);margin-bottom:.8rem}
+    .intro p+p,.intro h1+p{margin-top:1rem}
+    .intro p{max-width:48ch}
+    .hero figure{margin:.7rem;min-width:0;display:grid;grid-template-rows:1fr auto;background:#fbfbfb;color:var(--plum);border-radius:.9rem;overflow:hidden}
+    img{display:block;width:100%;height:auto}
+    .hero img{height:100%;max-height:22rem;aspect-ratio:1.25;object-fit:contain}
+    figcaption{padding:.55rem .8rem;font-size:.85rem}
+    .browse{margin-block:1rem 3.2rem;padding:clamp(1rem,3vw,2rem);border:1px solid var(--line);border-radius:1.15rem;background:var(--white)}
+    .browse h2{font-size:clamp(1.3rem,3vw,1.8rem)}
+    .cats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.55rem;list-style:none;margin:.85rem 0 0;padding:0}
+    .cats a{display:flex;align-items:center;justify-content:space-between;gap:.4rem;height:100%;min-height:2.75rem;padding:.55rem .65rem;border-radius:.5rem;background:var(--rose);font-size:.9rem;font-weight:680;text-decoration:none;overflow-wrap:anywhere}
+    .cats a:hover{background:var(--plum);color:var(--white)}
+    .section{margin-block:3.2rem}
+    .section>p{margin-top:.55rem;color:var(--muted)}
+    .journal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.15rem}
+    article{padding:clamp(1rem,3vw,1.65rem);border-top:3px solid var(--plum);background:var(--white)}
+    article .tag{color:var(--muted);margin-bottom:.45rem}
+    article h3+p,article p+p{margin-top:.6rem}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem;margin-top:1rem}
+    .gallery figure{overflow:hidden;background:#fbfbfb;border:1px solid var(--line);border-radius:.7rem}
+    .gallery img{aspect-ratio:1;object-fit:contain}
+    .faq{max-width:52rem}
+    details{border-bottom:1px solid var(--line)}
+    details:first-of-type{margin-top:.8rem}
+    summary{padding:.85rem 0;cursor:pointer;font-weight:700}
+    details p{padding:0 0 .9rem;color:var(--muted)}
+    footer{padding-block:1.4rem 2rem;border-top:1px solid var(--line);font-size:.92rem}
+    footer p+p{margin-top:.4rem}
+    @media(max-width:54rem){.cats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:42rem){.hero,.journal{grid-template-columns:1fr}.hero img{max-height:13rem}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:32rem){.cats{grid-template-columns:repeat(2,minmax(0,1fr))}.bar{align-items:flex-start;flex-direction:column;gap:.2rem}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"FishBuy spreadsheet | Guia para conferir links e produtos",
+        "description":"Use o guia FishBuy spreadsheet para explorar categorias, conferir links de produtos, comparar medidas e fotos QC e estimar o custo da encomenda.",
+        "inLanguage":"pt",
+        "about":{"@type":"Thing","name":"FishBuy spreadsheet"}
+      },
+      {
+        "@type":"FAQPage",
+        "inLanguage":"pt",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"O que significa FishBuy spreadsheet?",
+            "acceptedAnswer":{"@type":"Answer","text":"É um termo de busca usado para procurar listas de links e referências de produtos. Este guia explica como avaliar essas referências e apresenta categorias da HipobuyFind."}
+          },
+          {
+            "@type":"Question",
+            "name":"O que fazer se o link do produto mudou?",
+            "acceptedAnswer":{"@type":"Answer","text":"Confira o vendedor, o código do anúncio e a variante na página de destino. Se o código mudou, trate o resultado como outro anúncio e confirme as medidas e condições de novo."}
+          },
+          {
+            "@type":"Question",
+            "name":"Fotos QC comprovam a autenticidade?",
+            "acceptedAnswer":{"@type":"Answer","text":"Por si só, as fotos QC mostram apenas detalhes visíveis da unidade fotografada. Para avaliar a autenticidade, verifique também a procedência, a documentação e a identificação do vendedor."}
+          },
+          {
+            "@type":"Question",
+            "name":"Como escolher o tamanho entre dois anúncios?",
+            "acceptedAnswer":{"@type":"Answer","text":"Compare as medidas em centímetros de uma peça ou palmilha que já serve com as medidas da variante exata. Confira se os dois vendedores usaram o mesmo método de medição."}
+          },
+          {
+            "@type":"Question",
+            "name":"Como calcular o custo total para Portugal ou Brasil?",
+            "acceptedAnswer":{"@type":"Answer","text":"Some o preço do artigo, o envio interno, as tarifas de serviço, o frete internacional e os encargos aplicáveis ao destino. Compare valores na mesma moeda e confirme o que já está incluído na cotação."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!--
+    Pesquisa editorial: a primeira página do Google não estava acessível para
+    conferência. As referências abaixo são resultados da pesquisa complementar,
+    sem indicação de posição no Google.
+    cafans.com/article-21368.html — listas, vendedores e pesquisa de produtos.
+    cafans.com/article-21300.html — etapas de avaliação de uma encomenda.
+    findhaul.com — conferência de origem, variantes e registros datados.
+    fishgoo.app — categorias, inspeção e transporte.
+    fishgooreps.com — referência da variante e perguntas para inspeção.
+    www.fishgoo.org — organização das listas e eliminação de duplicados.
+    www.fishgoo.info — navegação por categorias e imagens de inspeção.
+    fishgoo.net — guias de compra, frete e devoluções.
+    www.mickeybuys.com/blog/ — guias e comparações entre intermediários.
+    w2clinks.com/spreadsheet/litbuy/ — filtros e distinção entre lista e anúncio.
+    As referências de Fishgoo e Litbuy servem como exemplos de estrutura editorial.
+    O resultado de aquariofilia em fishbuy.in foi excluído da análise de compras.
+
+    Termos secundários: links de produtos, guia de tamanhos, fotos QC,
+    custo total da encomenda.
+    Consultas de cauda longa: como conferir links de produtos; código do anúncio
+    original; links de vendedor duplicados; variante de cor e tamanho;
+    como registrar a data da consulta; link do produto mudou; link que redireciona;
+    diferença entre anúncio e lista; tabela de medidas do vendedor; medidas da
+    palmilha em centímetros; largura do peito da peça; como medir o ombro;
+    comprimento da manga; circunferência do boné; cintura de calças em centímetros;
+    medidas de um conjunto; fotos QC da variante; inspeção visual de costuras;
+    foto lateral da sola; foto de etiquetas; verificação do fecho da bolsa;
+    foto do fecho da pulseira; autenticidade em fotos QC; envio interno do vendedor;
+    frete internacional por peso; peso volumétrico da caixa; encargos de importação
+    no destino; custo total para Portugal ou Brasil.
+  -->
+<link rel="canonical" href="https://kakobuyfinds.github.io/rzwun/">
+</head>
+<body>
+  <header class="wrap bar">
+    <a href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+    <span class="tag">Guia independente de pesquisa</span>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="intro">
+        <p class="tag">Caderno de compra</p>
+        <h1 id="titulo">FishBuy spreadsheet</h1>
+        <p>Comece pela categoria e guarde o link, a variante e a data da consulta. Essas três informações ajudam a perceber se uma foto, uma medida ou uma cotação corresponde à peça que pretende encomendar.</p>
+      </div>
+      <figure>
+        <img src="https://ca.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-keepall-bandouliere-50--M41416_PM1_Side%20view.jpg" width="800" height="800" alt="Bolsa de viagem Louis Vuitton Keepall 50 com monograma marrom e alças claras, vista de lado" loading="eager" fetchpriority="high" decoding="async">
+        <figcaption>Referência visual · Louis Vuitton Keepall Bandoulière 50</figcaption>
+      </figure>
+    </section>
+
+    <nav class="browse" aria-labelledby="categorias">
+      <h2 id="categorias">Explorar categorias</h2>
+      <ul class="cats">
+        <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Calçado <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Moletons e suéteres <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">Camisetas <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Jaquetas <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Calças e shorts <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Bonés e chapéus <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-917-Sets.html">Conjuntos <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Roupa íntima <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Camisas esportivas <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Acessórios <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+
+    <section class="section" aria-labelledby="guias">
+      <h2 id="guias">Quatro guias para avaliar uma compra</h2>
+      <div class="journal">
+        <article>
+          <p class="tag">01 · Origem</p>
+          <h3>Como conferir links de produtos</h3>
+          <p>Ao consultar uma lista encontrada pela busca FishBuy spreadsheet, abra o anúncio e registre o código original, o vendedor, a variante de cor e tamanho e a data da consulta. Se dois links levam ao mesmo vendedor e código de anúncio, anote as duas referências na mesma linha.</p>
+          <p>Quando um link redireciona, volte a confirmar o código e a disponibilidade da variante. Guarde o endereço que abriu e assinale as informações que ainda precisam de confirmação.</p>
+        </article>
+        <article>
+          <p class="tag">02 · Caimento</p>
+          <h3>Guia de tamanhos em centímetros</h3>
+          <p>Use a tabela de medidas do vendedor. Para calçado, compare o comprimento da palmilha em centímetros. Para camisetas, moletons e jaquetas, meça a largura do peito da peça sobre uma superfície plana, a distância entre os ombros e o comprimento da manga.</p>
+          <p>Para calças e shorts, confirme se a cintura indicada é a largura da peça plana ou a circunferência. Compare cada peça de um conjunto separadamente. Para um boné, compare a circunferência da cabeça com o intervalo de ajuste.</p>
+        </article>
+        <article>
+          <p class="tag">03 · Inspeção visual</p>
+          <h3>O que observar nas fotos QC</h3>
+          <p>QC significa controle de qualidade. Peça fotos da variante escolhida. Para calçado, uma vista lateral da sola ajuda a conferir o perfil. Para vestuário, observe as costuras e peça uma foto legível das etiquetas. Numa bolsa, peça imagens do fecho aberto e fechado. Numa pulseira, peça uma vista próxima do encaixe.</p>
+          <p>Se a cor for decisiva, peça outra imagem sob luz neutra. Anote o que está visível e o que continua por verificar antes de aprovar a peça.</p>
+        </article>
+        <article>
+          <p class="tag">04 · Envio</p>
+          <h3>Como estimar o custo total da encomenda</h3>
+          <p>Separe o preço do produto, o envio interno do vendedor, a tarifa de serviço e o frete internacional. Peça o peso medido e as dimensões da caixa. Quando a transportadora usa peso volumétrico, uma caixa grande pode mudar a cotação.</p>
+          <p>Para Portugal, faça a comparação em euros. Para o Brasil, compare em reais. Registre a data do câmbio, confirme quais encargos estão incluídos e deixe os valores pendentes assinalados até obter uma cotação.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="referencias">
+      <h2 id="referencias">Referências visuais por tipo de peça</h2>
+      <p>As imagens ilustram modelos e detalhes de design. A disponibilidade e a procedência de cada anúncio devem ser confirmadas separadamente.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://i.ebayimg.com/images/g/r7EAAOSwx5VivSll/s-l1200.jpg" width="600" height="600" alt="Tênis Nike Dunk Low branco e preto" loading="lazy" decoding="async">
+          <figcaption>Nike Dunk Low · Calçado</figcaption>
+        </figure>
+        <figure>
+          <img src="https://kream-phinf.pstatic.net/MjAyMzAzMDdfMTA3/MDAxNjc4MTc5NjY0NzEy.ywT-C0N-bOkdEikY4gwUQSqfbMUqZ8hbm6_Y4mKw-EEg.yNWViPfg346maN89WgaNq0WgNhGPTj83ykVJoOV6H58g.PNG/a_398165795e5d4be98abae07ec3d218b8.png" width="600" height="600" alt="Suéter Dior Oblique azul-marinho com padrão jacquard" loading="lazy" decoding="async">
+          <figcaption>Dior Oblique · Vestuário</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" alt="Boné Gucci bege em tecido com padrão GG" loading="lazy" decoding="async">
+          <figcaption>Gucci GG · Bonés</figcaption>
+        </figure>
+        <figure>
+          <img src="https://cdn.theluxurycloset.com/uploads/products/750x750/luxury-women-hermes-used-accessories-p718595-002.jpg" width="750" height="750" alt="Pulseira Hermès Clic H com esmalte preto e fecho dourado em H" loading="lazy" decoding="async">
+          <figcaption>Hermès Clic H · Joalheria</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="perguntas">
+      <h2 id="perguntas">Perguntas frequentes</h2>
+      <details open>
+        <summary>O que significa FishBuy spreadsheet?</summary>
+        <p>É um termo de busca usado para procurar listas de links e referências de produtos. Este guia explica como avaliar essas referências e apresenta categorias da HipobuyFind.</p>
+      </details>
+      <details>
+        <summary>O que fazer se o link do produto mudou?</summary>
+        <p>Confira o vendedor, o código do anúncio e a variante na página de destino. Se o código mudou, trate o resultado como outro anúncio e confirme as medidas e condições de novo.</p>
+      </details>
+      <details>
+        <summary>Fotos QC comprovam a autenticidade?</summary>
+        <p>Por si só, as fotos QC mostram apenas detalhes visíveis da unidade fotografada. Para avaliar a autenticidade, verifique também a procedência, a documentação e a identificação do vendedor.</p>
+      </details>
+      <details>
+        <summary>Como escolher o tamanho entre dois anúncios?</summary>
+        <p>Compare as medidas em centímetros de uma peça ou palmilha que já serve com as medidas da variante exata. Confira se os dois vendedores usaram o mesmo método de medição.</p>
+      </details>
+      <details>
+        <summary>Como calcular o custo total para Portugal ou Brasil?</summary>
+        <p>Some o preço do artigo, o envio interno, as tarifas de serviço, o frete internacional e os encargos aplicáveis ao destino. Compare valores na mesma moeda e confirme o que já está incluído na cotação.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Guia editorial independente. As marcas são citadas como referências visuais.</p>
+    <p><a href="https://www.hipobuyfind.com">Visitar hipobuyfind.com</a></p>
+  </footer>
+</body>
+</html>
